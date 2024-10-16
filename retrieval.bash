@@ -28,7 +28,7 @@ for file in temp_*.txt; do
     # Extract the title from the text file
     title=$(grep -m 1 "^TI  -" "$file" | sed 's/TI  - //g')
 
-    # If the title is found, sanitize it for use as a filename (remove spaces and special characters)
+    # If the title is found, prep it for use as a filename (remove spaces and special characters)
     if [[ ! -z "$title" ]]; then
         clean_title=$(echo "$title" | sed 's/[^a-zA-Z0-9_-]/_/g')
 

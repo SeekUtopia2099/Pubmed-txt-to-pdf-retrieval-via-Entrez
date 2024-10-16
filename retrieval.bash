@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Output final PDFs into one place
-output_dir="Research_PDFs"
+output_dir=""
 
 # Fetch PubMed records for "telomeres AND anti-aging" and store them in results.txt
-esearch -db pubmed -query "telomeres AND anti-aging" -retmax 200 | \
+esearch -db pubmed -query "" -retmax 200 | \
 efetch -format medline > results.txt
 
 # Check if results.txt has content before proceeding

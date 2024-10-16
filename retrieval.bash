@@ -3,7 +3,7 @@
 # Output final PDFs into one place
 output_dir=""
 
-# Fetch PubMed records for "telomeres AND anti-aging" and store them in results.txt
+# Fetch PubMed records for "[search terms]" and store them in results.txt
 esearch -db pubmed -query "" -retmax 200 | \
 efetch -format medline > results.txt
 

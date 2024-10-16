@@ -25,7 +25,7 @@ fi
 
 # Loop through the text files
 for file in temp_*.txt; do
-    # Extract the title from the text file (assuming "TI  -" is the title field in the Medline format)
+    # Extract the title from the text file
     title=$(grep -m 1 "^TI  -" "$file" | sed 's/TI  - //g')
 
     # If the title is found, sanitize it for use as a filename (remove spaces and special characters)
